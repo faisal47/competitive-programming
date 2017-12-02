@@ -1,0 +1,10 @@
+double findAngle(PT a, PT b, PT c )
+{
+double A = sqrt(sqr(b.x-c.x)+sqr(b.y-c.y));
+double B = sqrt(sqr(a.x-c.x)+sqr(a.y-c.y));
+double C = sqrt(sqr(a.x-b.x)+sqr(a.y-b.y));
+
+if(2*A*C == 0) return 1e9;
+double ang = acos((A*A+C*C-B*B)/(2*A*C));
+return (ang*180)/PI;
+}

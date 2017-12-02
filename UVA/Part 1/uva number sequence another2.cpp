@@ -1,0 +1,247 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int main ()
+{
+    long long int n,t,a,b,c,d,len,flen,e,flag;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        a=0;
+        len=0;
+        flen=0;
+        while(1)
+        {
+            ++a;
+            if(a<10)
+                len+=1;
+            else if(a<100)
+                len+=2;
+            else if(a<1000)
+                len+=3;
+            else if(a<10000)
+                len+=4;
+            else if(a<100000)
+                len+=5;
+            else if(a<1000000)
+                len+=6;
+            else if(a<10000000)
+                len+=7;
+            else if(a<100000000)
+                len+=8;
+            else if(a<1000000000)
+                len+=9;
+            else
+                len+=10;
+            flen+=len;
+            if(flen==n)
+            {
+                c=a%10;
+                cout<<c<<endl;
+                break;
+            }
+            else if(flen>n)
+            {
+                b=flen;
+                while(1)
+                {
+                    flag=0;
+                    if(a<10)
+                    {
+                        if(b==n)
+                        {
+                            c=a%10;
+                            cout<<c<<endl;
+                            break;
+                        }
+                        b-=1;
+                        --a;
+                    }
+                    else if(a<100)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=2;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<1000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=3;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<10000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=4;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<100000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=5;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<1000000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=6;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<10000000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=7;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<100000000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=8;
+                      if(flag==1)
+                      break;
+                    }
+                     else if(a<1000000000)
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=9;
+                      if(flag==1)
+                      break;
+                    }
+                     else
+                    {
+                        e=a;d=b;
+                      while(1)
+                      {
+                          c=e%10;e/=10;
+                          if(d==n)
+                          {
+                              cout<<c<<endl;
+                              flag=1;
+                              break;
+                          }
+                          --d;
+                          if(e==0)
+                          break;
+                      }
+                      --a;b-=10;
+                      if(flag==1)
+                      break;
+                    }
+                }
+                break;
+            }
+        }
+    }
+    return 0;
+}
